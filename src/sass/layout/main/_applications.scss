@@ -1,0 +1,126 @@
+.applications {
+    position: relative;
+    height: 80rem;
+    width: 100%;
+   
+    @include respond(tablet) {
+        height: 70rem;
+    }
+    @include respond(phone) {
+        height: 114rem;
+    }
+    &__grocery-app, &__coin-app {
+        position: relative;
+        height: 60rem;
+        width: 54rem;
+
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        overflow: hidden;
+
+        &-heading {
+            color: $color-white;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(tablet) {            
+            width: 32rem;
+            height: 55rem;
+            
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @include respond(phone) {   
+            position: absolute;
+            width: 32rem;
+            height: 55rem;            
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+    
+    &__grocery-app {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary, .3),
+            rgba($color-primary-light, .3)),
+            url($app-box-1);    
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: .5rem;
+
+            &-heading {
+                margin-top: 2rem;
+                color: $color-white;
+                margin-bottom: 2rem;
+            }
+    }
+    &__coin-app {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary, .3),
+            rgba($color-primary-light, .3)),
+            url($app-box-2);    
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: .5rem;
+
+            &-heading {
+                color: $color-white;
+                margin-bottom: 2rem;
+            }
+
+        @include respond(phone) {
+            top: 72rem;
+        }
+    }
+    &__title {
+        margin-top: 5rem;
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: -2rem;
+        overflow-y: auto;
+
+        @include respond(tablet) {
+            right: 0;
+        }
+    }
+
+    &__git {
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        background-image: url($github-icon);
+        background-size: cover;
+        background-color: $color-white;
+        height: 5rem;
+        width: 5rem;
+        
+        border-radius: .5rem;
+
+        &-link {
+            position: absolute;
+            height: 100%;            
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+
+
+    &__link-box {
+        position: absolute;
+        
+        left: 50%;
+        line-height: 1rem;;
+        padding: .5rem;
+        transform: translateX(-50%);
+        background-color: rgba($color-white, .9);
+       
+      
+    }
+}

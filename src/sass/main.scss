@@ -1,0 +1,34 @@
+@import "abstracts/_functions";
+@import "abstracts/_variables";
+@import "abstracts/_mixins";
+
+@import './base/base';
+@import './base/animations';
+@import './base/typography';
+@import './base/utilities';
+
+@import './components/info';
+@import './components/button';
+@import './components/checkbox';
+@import './components/popup';
+@import './components/bg-video';
+@import './components/form';
+
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/navigation";
+@import "layout/groceryApp/groceryInput";
+@import "layout/groceryApp/groceryList";
+@import "layout/groceryApp/groceryItem";
+@import "layout/groceryApp/groceryRemove"; 
+@import "layout/groceryApp/groceryCompleted"; 
+@import "layout/groceryApp/groceryListUnit"; 
+@import "layout/groceryApp/grocery"; 
+@import "layout/main/resume"; 
+@import "layout/main/applications"; 
+@import "layout/main/about"; 
+@import "layout/main/contact"; 
+
+
+@import "pages/home";

@@ -1,0 +1,17 @@
+.item-remove {
+  height: 4rem;
+  width: 5rem;
+  float: left;
+  &__button {
+    background-color: $color-beige-pink;
+    border: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: $color-beige-pink-dark;
+    }
+  }
+}

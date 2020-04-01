@@ -1,0 +1,119 @@
+.info-box {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-secondary, .8);
+    border-radius: .3rem;
+    padding: 3rem;
+    padding-left: 5rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+    color: $color-white;
+    @include respond(phone) {
+       padding: 1.5rem;
+        transform: none;
+    }
+
+    & > * {
+        transform: skewX(12deg);
+
+        @include respond(phone) {
+       
+            transform: none;
+        }
+    }
+
+    &__text {
+        position: relative;
+        top: 20%;
+        transform: skewX(12deg) translateY(-20%);
+       
+        font-size: $medium-font-size;
+        
+        @include respond(tablet) {       
+            transform: skewX(12deg);
+            text-align: justify;
+            top: 0;
+        }
+        @include respond(phone) {       
+            transform: none;
+            text-align: justify;
+        }
+    }
+
+
+        &__shape {
+            width: 15rem;
+            height: 15rem;
+            float: left;
+            top: 50%;
+            
+            transform: translateY(-50%) skewX(12deg);
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 4rem;
+
+            @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+                -webkit-clip-path: circle(50% at 50% 50%);
+                clip-path: circle(50% at 50% 50%);
+                -webkit-shape-outside: circle(50% at 50% 50%);
+                shape-outside: circle(50% at 50% 50%);
+                border-radius: none;
+            }
+
+            @include respond(tablet) {
+                margin-right: 4rem;
+                margin-bottom: 5rem;
+            }
+    
+            @include respond(phone) {
+               
+                position: absolute;
+                top: 8rem;
+                left: 50%;
+                transform: translate(-50%);
+               
+
+            }
+    }
+    
+    &__img {
+        height: 100%;
+        transform: scale(1);
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+    &:hover &__img {
+        transform: scale(1.4);
+        filter: blur(3px) brightness(80%);
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &__content {
+        
+        @include respond(phone) {
+            margin-top: 20rem;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.item {
+  float: left;
+  height: 4rem;
+  width: 22rem;
+  border-bottom: black 1px solid;
+  background-color: $color-white;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+
+  @include respond(tablet) {
+    width: 21rem;
+  }
+  &__text {
+    font-size: $default-font-size;
+    text-transform: uppercase;
+    margin-left: 1rem;
+
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    margin-right: 0.5rem;
+    float: left;
+
+    &--completed {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-left: 1rem;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      text-decoration: line-through;
+      float: left;
+    }
+  }
+}

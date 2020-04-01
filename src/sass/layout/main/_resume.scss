@@ -1,0 +1,114 @@
+.resume {
+  position: relative;
+  height: 60rem;
+
+  @include respond(phone) {
+    height: 40rem;
+  }
+
+  &__list {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70rem;
+    text-align: center;
+
+    @include respond(tablet) {
+      width: 55rem;
+    }
+
+    @include respond(phone) {
+      width: 20rem;
+      top: 12rem;
+    }
+  }
+  &__box {
+    width: 100rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 0.3rem;
+    transform: translate(-50%, -50%) skewX(-12deg);
+    background-color: $color-white;
+    padding: 4rem;
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+
+    & > * {
+      transform: skewX(12deg);
+
+      @include respond(phone) {
+        transform: skewX(0);
+      }
+    }
+
+    @include respond(tablet) {
+      width: 60rem;
+    }
+
+    @include respond(phone) {
+      width: 30rem;
+      transform: translate(-50%, -50%) skewX(0);
+      padding: 1rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    padding-right: 2rem;
+    list-style: none;
+    font-size: $large-font-size;
+    opacity: 1;
+    height: 3rem;
+    margin-bottom: 1rem;
+
+    @include respond(tablet) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      padding: 1rem;
+    }
+  }
+
+  &__html,
+  &__css,
+  &__js,
+  &__sass,
+  &__xd,
+  &__react,
+  &__node,
+  &__vscode {
+    float: left;
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    margin-right: 1rem;
+  }
+
+  &__html {
+    background-image: url("../../../assets/html5.png");
+  }
+  &__css {
+    background-image: url("../../../assets/css3.png");
+  }
+  &__js {
+    background-image: url("../../../assets/javascript.png");
+  }
+  &__sass {
+    background-image: url("../../../assets/scss2.png");
+  }
+  &__xd {
+    background-image: url("../../../assets/xd.png");
+  }
+  &__react {
+    background-image: url("../../../assets/react2.png");
+  }
+  &__node {
+    background-image: url("../../../assets/nodejs.png");
+  }
+  &__vscode {
+    background-image: url("../../../assets/vscode.png");
+  }
+}

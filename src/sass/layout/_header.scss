@@ -1,0 +1,72 @@
+.header {
+    height: 95vh;
+    background-color: white;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url($header-hero);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    -moz-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+   
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+url($header-hero);
+}
+   
+    @include respond(tablet) {
+        background-position: left;
+    }
+
+    @include respond(phone) {
+        clip-path: none;
+        height: 90vh;
+    }
+    &__text-box {
+        position: absolute;
+        top: 15rem;
+        left: 60rem;
+      
+        @include respond(tablet) {
+            top: 10rem;
+            left: 10rem;
+        }
+        @include respond(phone) {
+            top: 2rem;
+            left: 2rem;
+        }
+      
+    }
+
+    &__info-box {       
+        position: absolute;
+        left: 60rem;
+        top: 45rem;
+        width: 60rem;
+
+
+        @include respond(tablet) {
+            top: 40rem;
+            left: 25rem;
+            width: 50rem;
+        }
+        @include respond(phone) {
+            left: 50%;
+            transform: translateX(-50%);            
+            width: 100%;
+            top: 20rem;
+        }
+    }
+
+}

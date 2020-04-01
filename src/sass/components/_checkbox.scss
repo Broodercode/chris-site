@@ -1,0 +1,16 @@
+.check {
+   
+    font-size: $default-font-size;
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    background-color: $color-beige-green;
+    border-radius: .5rem;
+    border: .2rem solid $color-green;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+}

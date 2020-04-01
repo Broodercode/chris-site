@@ -1,0 +1,95 @@
+.unit-container {
+  width: 6.9rem;
+  height: 3.9rem;
+  float: right;
+}
+.unit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $color-beige-purple;
+  border-radius: 0.5rem;
+  &__toggle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 30;
+  }
+
+  &__button {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    font-style: italic;
+    cursor: pointer;
+  }
+  &__text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__selected {
+    font-size: 1.6rem;
+    line-height: 1;
+    margin: 0;
+  }
+
+  &__option,
+  &__label {
+    font-size: 1.6rem;
+  }
+
+  &__options {
+    position: absolute;
+    width: 100%;
+    margin-top: 60%;
+    background-color: $color-beige-purple;
+    border-radius: 0.5rem;
+    z-index: 200;
+  }
+  &__label {
+    display: none;
+    opacity: 0;
+    text-align: center;
+  }
+
+  &__toggle:checked ~ &__options &__label {
+    display: block;
+    padding: 1.2rem 0;
+    opacity: 1;
+  }
+
+  &__option {
+    position: relative;
+    line-height: 1;
+    z-index: 2;
+
+    &:hover {
+      background-color: $color-beige-green;
+    }
+    border-radius: 0.5rem;
+  }
+
+  &__change {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  input[type="radio"] {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,72 @@
+.section-resume {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.4),
+      rgba($color-primary, 0.4)
+    ),
+    url($resume-bg);
+  padding-top: 20vh;
+  padding-bottom: 10rem;
+  margin-top: -20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond(phone) {
+    padding-top: 10rem;
+    position: relative;
+    height: 100%;
+  }
+}
+
+.section-application {
+  padding-bottom: 25rem;
+  padding-top: 5rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 1),
+    rgba($color-tertiary-dark, 1)
+  );
+  background-size: cover;
+}
+
+.section-about {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url($about-bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: skewY(-5deg);
+  margin-top: -10rem;
+
+  @include respond(phone) {
+    transform: none;
+  }
+  & > * {
+    transform: skewY(5deg);
+
+    @include respond(phone) {
+      transform: none;
+    }
+  }
+}
+
+.section-contact {
+  margin-top: -15rem;
+  padding-top: 30rem;
+  padding-bottom: 10rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary,
+    $color-tertiary-dark
+  );
+
+  @include respond(phone) {
+    margin-top: 0;
+    padding-top: 0;
+    background-image: none;
+    padding-bottom: 0;
+  }
+}

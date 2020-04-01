@@ -1,0 +1,44 @@
+.completed {
+  float: left;
+  height: 4rem;
+  width: 5rem;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  & input {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+  }
+  &__label {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-color: $color-beige-green;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    color: $color-black;
+    font-size: 2rem;
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  & input:checked ~ &__label {
+    background-color: $color-beige-green-dark;
+    color: $color-beige-green;
+  }
+}
